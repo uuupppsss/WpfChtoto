@@ -12,8 +12,8 @@
             <TabItem Header="Найти">
                 <StackPanel>
                     <Label Content="Имя"/>
-                    <TextBox Height="30" />
-                    <Label Content="Фамилия"/>
+                    <TextBox Height="30" x:Name="Search_FirstnameTextbox"/>
+                    <Label Content="Фамилия" x:Name="Search_LastnameTextbox"/>
                     <TextBox Height="30" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Height="30" Margin="10" Width="100" Content="Найти паспорт"/>
@@ -25,16 +25,16 @@
             <TabItem Header="Создать паспорт">
                 <StackPanel>
                     <Label Content="Имя"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Passport_FirstnameTextbox"/>
                     <Label Content="Фамилия"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Passport_LastnameTextbox"/>
                     <Label Content="Серия и номер паспорта"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Passport_SeriesAndNumberTextbox"/>
                     <Label Content="Дата выдачи"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Passport_IssueDateTextbox"/>
                     <Label Content="РОВД"/>
-                    <TextBox  Height="30" />
-                    <Button Height="30" Margin="10" Width="100" Content="Создать"/>
+                    <TextBox  Height="30" x:Name="Passport_ROVDTextbox"/>
+                    <Button Height="30" Margin="10" Width="100" Content="Создать" Click="CreatePassportButtom_Click"/>
                     
                 </StackPanel>
             </TabItem>
@@ -42,11 +42,11 @@
             <TabItem Header="Создать снилс">
                 <StackPanel>
                     <Label Content="Имя"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Snils_FirstnameTextbox"/>
                     <Label Content="Фамилия"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Snils_LastnameTextbox"/>
                     <Label Content="Номер снилса"/>
-                    <TextBox  Height="30" />
+                    <TextBox  Height="30" x:Name="Snils_NumberTextbox"/>
                     <Button Height="30" Margin="10" Width="100" Content="Создать"/>
 
                 </StackPanel>
