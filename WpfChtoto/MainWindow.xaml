@@ -7,11 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <TextBox x:Name="FirstnameTextbox" Height="30" Margin="10"/>
-            <TextBox x:Name="LastnameTextbox" Height="30" Margin="10"/>
-            <Button Height="30" Margin="10"/>
-        </StackPanel>
+        <TabControl>
+
+            <TabItem Header="Найти">
+                <StackPanel>
+                    <Label Content="Имя"/>
+                    <TextBox Height="30" />
+                    <Label Content="Фамилия"/>
+                    <TextBox Height="30" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Height="30" Margin="10" Width="100" Content="Найти паспорт"/>
+                        <Button Height="30" Margin="10" Width="100" Content="Найти снилс"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Создать паспорт">
+                <StackPanel>
+                    <Label Content="Имя"/>
+                    <TextBox  Height="30" />
+                    <Label Content="Фамилия"/>
+                    <TextBox  Height="30" />
+                    <Label Content="Серия и номер паспорта"/>
+                    <TextBox  Height="30" />
+                    <Label Content="Дата выдачи"/>
+                    <TextBox  Height="30" />
+                    <Label Content="РОВД"/>
+                    <TextBox  Height="30" />
+                    <Button Height="30" Margin="10" Width="100" Content="Создать"/>
+                    
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Создать снилс">
+                <StackPanel>
+                    <Label Content="Имя"/>
+                    <TextBox  Height="30" />
+                    <Label Content="Фамилия"/>
+                    <TextBox  Height="30" />
+                    <Label Content="Номер снилса"/>
+                    <TextBox  Height="30" />
+                    <Button Height="30" Margin="10" Width="100" Content="Создать"/>
+
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        
 
     </Grid>
 </Window>
