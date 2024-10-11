@@ -16,9 +16,10 @@
                     <Label Content="Фамилия" x:Name="Search_LastnameTextbox"/>
                     <TextBox Height="30" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Height="30" Margin="10" Width="100" Content="Найти паспорт"/>
-                        <Button Height="30" Margin="10" Width="100" Content="Найти снилс"/>
+                        <Button Height="30" Margin="10" Width="100" Content="Найти паспорт" Click="SearchPassport_ButtonClick"/>
+                        <Button Height="30" Margin="10" Width="100" Content="Найти снилс" Click="SearchSnils_ButtonClick"/>
                     </StackPanel>
+                    <TextBlock Height="30" x:Name="ResultTextblock"/>
                 </StackPanel>
             </TabItem>
 
@@ -34,7 +35,7 @@
                     <TextBox  Height="30" x:Name="Passport_IssueDateTextbox"/>
                     <Label Content="РОВД"/>
                     <TextBox  Height="30" x:Name="Passport_ROVDTextbox"/>
-                    <Button Height="30" Margin="10" Width="100" Content="Создать" Click="CreatePassportButtom_Click"/>
+                    <Button Height="30" Margin="10" Width="100" Content="Создать" Click="CreatePassport_ButtonClick"/>
                     
                 </StackPanel>
             </TabItem>
@@ -47,7 +48,7 @@
                     <TextBox  Height="30" x:Name="Snils_LastnameTextbox"/>
                     <Label Content="Номер снилса"/>
                     <TextBox  Height="30" x:Name="Snils_NumberTextbox"/>
-                    <Button Height="30" Margin="10" Width="100" Content="Создать"/>
+                    <Button Height="30" Margin="10" Width="100" Content="Создать" Click="CreateSnils_ButtonClick"/>
 
                 </StackPanel>
             </TabItem>

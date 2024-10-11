@@ -29,7 +29,7 @@ namespace WpfChtoto
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        private async void CreatePassportButtom_Click(object sender, RoutedEventArgs e)
+        private async void CreatePassport_ButtonClick(object sender, RoutedEventArgs e)
         {
             var passport = new
             {
@@ -39,7 +39,39 @@ namespace WpfChtoto
                 ROVD = Passport_ROVDTextbox.Text,
                 SeriesAndNumber = Passport_SeriesAndNumberTextbox.Text
             };
-           
+
+            
+            
+        }
+
+        private async Task PostAsync(string url, object data)
+        {
+            string arg= JsonSerializer.Serialize(data);
+            var content=new StringContent(arg, Encoding.UTF8, "application/json");
+            var response=await httpClient.PostAsync(url, content);
+            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            {
+                var responseData = await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void CreateSnils_ButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchPassport_ButtonClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchSnils_ButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
